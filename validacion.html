@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro para Evento</title>
+
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro para Evento</h1>
+        <form id="formularioEvento" novalidate>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                <span class="error" id="errorNombre"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                <span class="error" id="errorEmail"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" required>
+                <span class="error" id="errorTelefono"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento <span class="required">*</span></label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                <span class="error" id="errorFecha"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">País <span class="required">*</span></label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccione un país</option>
+                </select>
+                <span class="error" id="errorPais"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de Entrada <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="tipoEntrada" value="general" required>
+                        General ($500)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="tipoEntrada" value="vip" required>
+                        VIP ($1000)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="tipoEntrada" value="premium" required>
+                        Premium ($1500)
+                    </label>
+                </div>
+                <span class="error" id="errorTipoEntrada"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Selección de Talleres</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="talleres" value="desarrollo-web">
+                        Desarrollo Web
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="talleres" value="diseno-ux">
+                        Diseño UX/UI
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="talleres" value="marketing-digital">
+                        Marketing Digital
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="identificacion">Identificación (PDF o Imagen) <span class="required">*</span></label>
+                <input type="file" id="identificacion" name="identificacion" accept=".pdf,.jpg,.jpeg,.png" required>
+                <span class="error" id="errorArchivo"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios">Comentarios Adicionales</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Registrarse</button>
+            </div>
+
+            <div id="mensajeExito" class="mensaje-exito"></div>
+        </form>
+    </div>
+
+    <!-- Enlace al JS -->
+    <script src="resources/js/script.js"></script>
+</body>
+</html>
